@@ -16,6 +16,9 @@ namespace samples.dependencyInjection
             var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
             var diContainer = new ServiceCollection();
             diContainer.AddSingleton<ISecurityVault, SimpleKeyVault>();
+            diContainer.AddSingleton<ICustomerPersister, CustomerFilePersister>();
+            diContainer.AddSingleton<IOrderPersister, OrderFilePersister>();
+            diContainer.AddSingleton<IOrderPersister, OrderEntityFrameworkPersister>();
             diContainer.AddSingleton<IConfigurationRoot>(builder.Build());
             diContainer.AddSingleton<SomeClass, SomeClass>(); // Added to show constructor injection
 
