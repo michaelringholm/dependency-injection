@@ -37,5 +37,19 @@ namespace samples.dependencyInjection
 
             Console.WriteLine("DepedencyInjection demo Ended!");
         }
+
+            static
+    {
+        Console.WriteLine("*********** Using DI ************");
+        var diContainer = new ServiceCollection();
+        diContainer.AddSingleton<IOrderPersister, OrderFilePersister>();
+        //diContainer.AddSingleton<IOrderPersister, OrderEntityFrameworkPersister>();
+        diContainer.AddSingleton<IConfigurationRoot>(builder.Build());
+
+        var diProvider = diContainer.BuildServiceProvider();
+        var orderPersister = diProvider.GetService<IOrderPersister>();
     }
+    }
+
+
 }
