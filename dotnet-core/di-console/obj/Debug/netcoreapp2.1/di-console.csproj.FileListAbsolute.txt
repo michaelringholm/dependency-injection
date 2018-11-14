@@ -1,0 +1,11 @@
+C:\data\github\dependency-injection\dotnet-core\di-console\obj\Debug\netcoreapp2.1\di-console.csprojAssemblyReference.cache
+C:\data\github\dependency-injection\dotnet-core\di-console\obj\Debug\netcoreapp2.1\di-console.csproj.CoreCompileInputs.cache
+C:\data\github\dependency-injection\dotnet-core\di-console\obj\Debug\netcoreapp2.1\di-console.AssemblyInfoInputs.cache
+C:\data\github\dependency-injection\dotnet-core\di-console\obj\Debug\netcoreapp2.1\di-console.AssemblyInfo.cs
+C:\data\github\dependency-injection\dotnet-core\di-console\bin\Debug\netcoreapp2.1\di-console.deps.json
+C:\data\github\dependency-injection\dotnet-core\di-console\bin\Debug\netcoreapp2.1\di-console.runtimeconfig.json
+C:\data\github\dependency-injection\dotnet-core\di-console\bin\Debug\netcoreapp2.1\di-console.runtimeconfig.dev.json
+C:\data\github\dependency-injection\dotnet-core\di-console\bin\Debug\netcoreapp2.1\di-console.dll
+C:\data\github\dependency-injection\dotnet-core\di-console\bin\Debug\netcoreapp2.1\di-console.pdb
+C:\data\github\dependency-injection\dotnet-core\di-console\obj\Debug\netcoreapp2.1\di-console.dll
+C:\data\github\dependency-injection\dotnet-core\di-console\obj\Debug\netcoreapp2.1\di-console.pdb
