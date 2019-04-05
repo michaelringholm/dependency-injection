@@ -15,11 +15,11 @@ namespace com.opusmagus
     {
         private static IServiceProvider serviceProvider;
         static ProcessOrder() {
-            serviceProvider = AppConfig.CreateServiceProvider();
+            //serviceProvider = AppConfig.CreateServiceProvider();
         }
 
         [FunctionName("process_order")]
-        public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log)
+        public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log, IOrderPersister orderPersister)
         {
             log.LogInformation("Processing order...");            
             string name = req.Query["name"];
@@ -28,9 +28,11 @@ namespace com.opusmagus
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
             
-            var orderPersister = serviceProvider.GetService<IOrderPersister>();
-            log.LogInformation("Processing order done!");            
+            //var orderPersister = serviceProvider.GetService<IOrderPersister>();
+            if(orderPersister != null)
+                log.LogInformation($"Found an order persister of type {orderPersister.ToString()}");
 
+            log.LogInformation("Processing order done!");            
             return (ActionResult)new OkObjectResult($"Done!");
         }
     }

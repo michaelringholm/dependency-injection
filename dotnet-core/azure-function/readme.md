@@ -1,0 +1,1 @@
+func azure functionapp publish cc-dev-di-demo2-fna
