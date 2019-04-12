@@ -1,10 +1,19 @@
 package com.opusmagus;
 
-import org.springframework.stereotype.Component;
+import org.apache.commons.logging.Log;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class CreateCustomerCommand implements ICommand {
+    @Autowired
+	private Log logger;
+	
 	public CreateCustomerCommand() {
-		System.out.println("CreateCustomerCommand initialized!");
+	}
+
+	@Override
+	public void Execute() {		
+		logger.info("Executing command CreateCustomerCommand...");
 	}
 }
